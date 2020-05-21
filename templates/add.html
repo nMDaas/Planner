@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Planner
+{% endblock %}
+
+{% block body %}
+  <h2> Add Day's Work  </h2>
+  <form action="{{ url_for('add') }}" method="post">
+    <div class="form-group">
+        <input class="form-control" name="day" placeholder="Day">
+        <input class="form-control" name="month" placeholder="Month">
+        <input class="form-control" name="goal" placeholder="Goal">
+        <input class="form-control" name="total" placeholder="Total">
+        <input class="form-control" name="easy_total" placeholder="Easy Total">
+        <input class="form-control" name="medium_total" placeholder="Medium Total">
+        <input class="form-control" name="hard_total" placeholder="Hard Total">
+    </div>
+
+    <div class="form-group">
+      <button class="btn btn-primary">Enter</button>
+    </div>
+  </form>
+
+{% endblock %}

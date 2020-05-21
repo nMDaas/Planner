@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Planner
+{% endblock %}
+
+{% block body %}
+
+<div>
+  <h2> Log Book  </h2>
+  <hr>
+  {% for work in works %}
+  <h3>{{ work.day }} {{ work.month }}</h3>
+  Goal: {{work.goal}} <br>
+  Total points: {{work.total}} <br>
+  Easy Total: {{work.easy_total}} <br>
+  Medium Total: {{work.medium_total}} <br>
+  Hard Total: {{work.hard_total}} <br>
+  Percentage easy: {{work.percent_easy}}% <br>
+  Percentage medium: {{work.percent_medium}}% <br>
+  Percentage hard: {{work.percent_hard}}% <br>
+  <hr>
+{% endfor %}
+</div>
+
+{% endblock %}
